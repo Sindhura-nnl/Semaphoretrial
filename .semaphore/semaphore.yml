@@ -5,9 +5,21 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: 'Block #1'
+  - name: Unit tests
     task:
       jobs:
         - name: 'Job #1'
           commands:
-            - checkout
+            - echo 'running unit tests'
+        - name: 'Job #'
+          commands: []
+        - name: 'Job #3'
+          commands: []
+      prologue:
+        commands:
+          - checkout
+  - name: Tests
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands: []
